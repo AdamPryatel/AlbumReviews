@@ -1,4 +1,4 @@
-﻿
+﻿@model ReviewsSite.Models.Album
 @{
     Layout = null;
 }
@@ -11,7 +11,8 @@
     <title>Index</title>
 </head>
 <body>
-    <h1>This is html</h1>
-    <p>Here is a paragraph</p>
+    <h1>Album List</h1>
+    <h2>Name: @Model.Name</h2>
+    <p>Description: @Model.Description.</p>
 </body>
 </html>

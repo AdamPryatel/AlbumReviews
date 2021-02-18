@@ -13,6 +13,12 @@ namespace ReviewsSite.Models
 
         public string Description { get; set; }
 
+        public string Image { get; set; }
+        
+        public string Category { get; set; }
+
+        public string Review { get; set; }
+
 
         public Album(int id, string name, string description)
         {
@@ -20,8 +26,6 @@ namespace ReviewsSite.Models
             Name = name;
             Description = description;
         }
-
-
 
 
     }

@@ -8,6 +8,10 @@ namespace ReviewsSite.Controllers
 {
     public class AlbumController : Controller
     {
-        return View
+        public string Index()
+        {
+            return "Hello World!";
+        }
+
     }
 }

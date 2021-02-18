@@ -9,7 +9,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Images\" />
+    <Folder Include="wwwroot\Images\" />
+    <Folder Include="wwwroot\Links\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\Metallica-Black-Album.jpg" />
   </ItemGroup>
 
 </Project>

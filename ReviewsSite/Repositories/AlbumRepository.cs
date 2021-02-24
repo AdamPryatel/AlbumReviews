@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ReviewsSite
 {
-    public class AlbumRepository : AlbumController
+    public class AlbumRepository : 
     {
         //public List<Album> ListofAlbums = new List<Album>();
 
@@ -22,7 +22,6 @@ namespace ReviewsSite
 
         ////    Console.WriteLine("Please select a Album ID: ");
         ////}
-
 
 
 

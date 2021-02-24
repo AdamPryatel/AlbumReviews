@@ -39,8 +39,4 @@ namespace ReviewsSite
                 // Add more albums here
         }
     }
-
-
-
-
 }

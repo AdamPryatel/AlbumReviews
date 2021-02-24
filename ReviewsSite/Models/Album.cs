@@ -32,7 +32,9 @@ namespace ReviewsSite.Models
             BandName = bandName;
         }
 
-
+        public Album()
+        {
+        }
     }
 
 

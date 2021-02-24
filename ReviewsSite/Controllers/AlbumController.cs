@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
 using ReviewsSite.Models;
+using ReviewsSite.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,7 @@ namespace ReviewsSite.Controllers
         //Album album2 = new Album(2, "Man on the Moon 3", "Is the seventh studio album by American rapper Kid Cudi. It was released on December 11, 2020 by Republic Records. It is the final installment of Cudi's Man on the Moon trilogy of albums.", "Kid Cudi");
 
 
-        IRepsoitory<Album> albumRepo;
+        IRepository<Album> albumRepo;
         
         public AlbumController(IRepository<Album> albumRepo)
         {

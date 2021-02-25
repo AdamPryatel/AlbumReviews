@@ -14,7 +14,7 @@ namespace ReviewsSite
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=(localDb)/mssqllocaldb; Database= RecordStoreDB_102021; Trusted_Connection=True";
+            var connectionString = "Server=(localDb)\\mssqllocaldb; Database= RecordStoreDB_102021; Trusted_Connection=True";
 
             optionsBuilder.UseSqlServer(connectionString);
 
@@ -38,6 +38,12 @@ namespace ReviewsSite
                     Description = "Is the seventh studio album by American rapper Kid Cudi. It was released on December 11, 2020 by Republic Records. It is the final installment of Cudi's Man on the Moon trilogy of albums."
                 });
                 // Add more albums here
+
+                // review
+                // Id = reviewId
+                //context = reviewcontext
+                // AlbumId
+
         }
     }
 }

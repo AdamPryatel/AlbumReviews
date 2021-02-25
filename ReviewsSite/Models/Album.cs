@@ -8,7 +8,7 @@ namespace ReviewsSite.Models
     public class Album
     {
 
-        public List<Album> ListofAlbums = new List<Album>();
+        //public List<Album> ListofAlbums = new List<Album>();
 
 
         public int Id { get; set; }

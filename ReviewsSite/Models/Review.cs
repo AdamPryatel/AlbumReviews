@@ -13,6 +13,8 @@ namespace ReviewsSite.Models
         public string ReviewerName { get; set; }
         public int Rating { get; set; }
         public int ReviewDate { get; set; }
+        public int AlbumId { get; set; }
+
 
         public virtual ICollection<Album> Albums { get; set; }
 

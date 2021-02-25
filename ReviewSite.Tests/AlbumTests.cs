@@ -13,7 +13,7 @@ namespace ReviewSite.Tests
 
         public AlbumTests()
         {
-            sut = new Album(37, "The Black - Metallica", "The Black is Great!");
+            //sut = new Album(37, "The Black - Metallica", "The Black is Great!");
         }
         
         [Fact]

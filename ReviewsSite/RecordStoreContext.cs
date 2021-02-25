@@ -9,11 +9,12 @@ namespace ReviewsSite
 {
     public class RecordStoreContext : DbContext
     {
-        public DbSet<Album> Albums { get; set; }         
+        public DbSet<Album> Albums { get; set; }    
+        public DbSet<Review> Reviews { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=(localDb)/mssqllocaldb; Databse= UniversityDB_102021; Trusted_Connection=True";
+            var connectionString = "Server=(localDb)/mssqllocaldb; Database= RecordStoreDB_102021; Trusted_Connection=True";
 
             optionsBuilder.UseSqlServer(connectionString);
 

@@ -23,6 +23,9 @@ namespace ReviewsSite.Models
 
         public string Review { get; set; }
 
+        public Album()
+        {
+        }
 
         public Album(int id, string name, string description, string bandName)
         {
@@ -32,9 +35,6 @@ namespace ReviewsSite.Models
             BandName = bandName;
         }
 
-        public Album()
-        {
-        }
     }
 
 

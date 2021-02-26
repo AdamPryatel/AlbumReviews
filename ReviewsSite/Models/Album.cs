@@ -8,7 +8,7 @@ namespace ReviewsSite.Models
     public class Album
     {
 
-        //public List<Album> ListofAlbums = new List<Album>();
+        public List<string> ListofSongs = new List<string>();          // song list
 
 
         public int Id { get; set; }
@@ -23,16 +23,22 @@ namespace ReviewsSite.Models
 
         public string Review { get; set; }
 
+        public string Image { get; set; }
+
+
+
         public Album()
         {
         }
 
-        public Album(int id, string name, string description, string bandName)
+        public Album(int id, string name, string description, string bandName, List<string> listofSongs, string image)
         {
             Id = id;
             Name = name;
             Description = description;
             BandName = bandName;
+            ListofSongs = listofSongs;
+            Image = image;
         }
 
     }

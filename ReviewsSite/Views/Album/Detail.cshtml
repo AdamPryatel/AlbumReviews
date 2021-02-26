@@ -13,9 +13,33 @@
     <h1>Album List</h1>
     <h2>Name: @Model.Name</h2>
     <h3>Band: @Model.BandName</h3>
-    <p>Description: @Model.Description. <img src="~/Images/Metallica-Black-Album.jpg" /> </p>
+    <p>Description: @Model.Description. <img src="~/@Model.Image" /></p>
 
-</body>
+        @foreach (var song in Model.ListofSongs)
+         {
+        <p>@song</p>
+         }
+
+
+        @*<p>Song List</p>
+            <ol>
+                <li>  </li>
+                <li> Sad But True</li>
+                <li> Holier Than Thou</li>
+                <li> The Unforgiven</li>
+                <li> Wherever I May Roam</li>
+                <li> Don't Tread on Me </li>
+                <li> Through the Never </li>
+                <li> Nothing Else Matters </li>
+                <li> Of Wolf and Man</li>
+                <li> The God That Failed </li>
+                <li> My Friend of Misery</li>
+                <li> The Struggle Within</li>
+            </ol>*@
+
+
+
+    </body>
 </html>
 
 @{

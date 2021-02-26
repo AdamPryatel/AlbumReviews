@@ -30,7 +30,7 @@ namespace ReviewsSite
                     Name = "The Black Album",
                     BandName = "Metallica",
                     Description = "Is the fifth studio album by American heavy metal band Metallica, released on August 12, 1991 through Elektra Records.It was recorded in an eight - month span at One on One Recording Studios in Los Angeles.",
-                    ListofSongs = new List<string> { "Enter Sandman", "Sad But True", "Holier Than Thou", "The Unforgiven", "Wherever I May Roam", "Don't Tread on Me", "Through the Never", "Nothing Else Matters", "Of Wolf and Man", "The God That Failed", "My Friend of Misery", "The Struggle Within" },
+                    SongsString = "Enter Sandman , Sad But True, Holier Than Thou, The Unforgiven, Wherever I May Roam, Don't Tread on Me, Through the Never, Nothing Else Matters, Of Wolf and Man, The God That Failed, My Friend of Misery, The Struggle Within" ,
                     Image = "Images/Metallica-Black-Album.jpg"
 
                 }, new Album()

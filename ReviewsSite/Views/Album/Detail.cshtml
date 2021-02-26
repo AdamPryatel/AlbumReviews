@@ -13,11 +13,12 @@
     <h1>Album List</h1>
     <h2>Name: @Model.Name</h2>
     <h3>Band: @Model.BandName</h3>
-    <p>Description: @Model.Description. <img src="~/@Model.Image" /></p>
+    <p>Description: @Model.Description. <img src="~/@Model.Image" width="250"/></p>
 
         @foreach (var song in Model.ListofSongs)
          {
         <p>@song</p>
+        @*<p>testing</p>*@
          }
 
 

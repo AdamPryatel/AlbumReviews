@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReviewsSite;
 
 namespace ReviewsSite.Migrations
 {
     [DbContext(typeof(RecordStoreContext))]
-    partial class RecordStoreContextModelSnapshot : ModelSnapshot
+    [Migration("20210226182922_list-parentheses")]
+    partial class listparentheses
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,9 +49,6 @@ namespace ReviewsSite.Migrations
                     b.Property<int?>("ReviewId")
                         .HasColumnType("int");
 
-                    b.Property<string>("SongsString")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("ReviewId");
@@ -63,8 +62,7 @@ namespace ReviewsSite.Migrations
                             BandName = "Metallica",
                             Description = "Is the fifth studio album by American heavy metal band Metallica, released on August 12, 1991 through Elektra Records.It was recorded in an eight - month span at One on One Recording Studios in Los Angeles.",
                             Image = "Images/Metallica-Black-Album.jpg",
-                            Name = "The Black Album",
-                            SongsString = "Enter Sandman , Sad But True, Holier Than Thou, The Unforgiven, Wherever I May Roam, Don't Tread on Me, Through the Never, Nothing Else Matters, Of Wolf and Man, The God That Failed, My Friend of Misery, The Struggle Within"
+                            Name = "The Black Album"
                         },
                         new
                         {

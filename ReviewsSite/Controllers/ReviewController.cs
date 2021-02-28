@@ -17,9 +17,10 @@ namespace ReviewsSite.Controllers
             this.reviewRepo = reviewRepo;
         }
 
-        public ViewResult Index()
+        public ViewResult Index(int albumId)
         {
-            return View(reviewRepo.GetAll());
+            
+            return View(reviewRepo.GetReviewsByAlbumId(albumId));
         }
     }
 }

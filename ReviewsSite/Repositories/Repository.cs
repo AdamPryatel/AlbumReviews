@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ReviewsSite.Models;
 
 namespace ReviewsSite.Repositories
 {
@@ -35,6 +36,11 @@ namespace ReviewsSite.Repositories
         public T GetById(int id)
         {
             return _db.Set<T>().Find(id);
+        }
+
+        public List<Review> GetReviewsByAlbumId(int albumId)
+        {
+            return _db.Set<Review>().Where(f => f.AlbumId == albumId).ToList();
         }
 
         public void Update(T obj)

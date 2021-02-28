@@ -14,7 +14,7 @@ namespace ReviewsSite.Models
         public int Rating { get; set; }
         public int ReviewDate { get; set; }
         public int AlbumId { get; set; }
-
+        public virtual Album Album { get; set; }
 
         public virtual ICollection<Album> Albums { get; set; }
 

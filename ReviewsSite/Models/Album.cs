@@ -26,7 +26,7 @@ namespace ReviewsSite.Models
         public string Review { get; set; }
 
         public string Image { get; set; }
-
+        public virtual List<Review> Reviews { get; set; }
 
 
         public Album()

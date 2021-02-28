@@ -16,20 +16,24 @@
 
     @*<p><a href="/Album/Detail/">Album Details</a></p>*@
 
-    @foreach(var Album in Model)
+    @foreach (var Album in Model)
     {
         <p>Name: <a href="/Album/Detail/@Album.Id">@Album.Name</a></p>
 
     }
 
+
+    <p><a href="/Review/">Filler</a></p>
+
+
     @*<h1>Album List</h1>
-    <h2>Name: @Model.Name</h2>
-    <h3>Band: @Model.BandName</h3>
-    <p>Description: @Model.Description. <img src="~/Images/Metallica-Black-Album.jpg" /> </p>*@
+        <h2>Name: @Model.Name</h2>
+        <h3>Band: @Model.BandName</h3>
+        <p>Description: @Model.Description. <img src="~/Images/Metallica-Black-Album.jpg" /> </p>*@
 
     @*<h2>Name: @Model.Name</h2>
-    <h3>Band: @Model.BandName</h3>
-    <p>Description: @Model.Description. <img src="~/Images/Metallica-Black-Album.jpg" /> </p>*@
+        <h3>Band: @Model.BandName</h3>
+        <p>Description: @Model.Description. <img src="~/Images/Metallica-Black-Album.jpg" /> </p>*@
     <!--<p>Song List</p>
     <ol>
         <li> Enter Sandman </li>

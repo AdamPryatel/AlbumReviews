@@ -41,6 +41,7 @@ namespace ReviewsSite
                     Description = "Is the seventh studio album by American rapper Kid Cudi. It was released on December 11, 2020 by Republic Records. It is the final installment of Cudi's Man on the Moon trilogy of albums."
 
                 });
+
             // Add more albums here
             modelBuilder.Entity<Review>().HasData(
             new Review()

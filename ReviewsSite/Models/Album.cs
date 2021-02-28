@@ -23,10 +23,14 @@ namespace ReviewsSite.Models
         
         public string Category { get; set; }
 
-        public string Review { get; set; }
+        //public string Review { get; set; }
 
         public string Image { get; set; }
-        public virtual List<Review> Reviews { get; set; }
+
+        //public virtual List<Review> Reviews { get; set; }
+
+        public virtual ICollection<Review> Review { get; set; }
+
 
 
         public Album()
@@ -42,6 +46,8 @@ namespace ReviewsSite.Models
             SongsString = songsString;
             Image = image;
         }
+
+
 
     }
 

@@ -8,7 +8,7 @@ namespace ReviewsSite.Models
     public class Album
     {
 
-        public string SongsString { get; set; }          // song list, public string lsit of songs - array
+        public string SongsString { get; set; }          // song list, public string lsit of songs - array return empty array(get)
 
         public List<string> ListofSongs { get { return SongsString.Split(',').ToList(); } }
 

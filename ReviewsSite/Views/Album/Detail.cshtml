@@ -12,47 +12,33 @@
     
 </head>
 <body>
-    <h1>Album List</h1>
-    <p>Name: @Model.Name</p>
-    <p>Band: @Model.BandName</p>
-    <p>Description: @Model.Description. <img src="~/@Model.Image" width="250" /></p>
+    <h1>@Model.Name by @Model.BandName</h1>
+    <div class="Container">
+        <p><img src="~/@Model.Image" width="350" /></p>
+        <div class="songList">
+            @foreach (var song in Model.ListofSongs)
+            {
+                <ul>
+                    <li>@song</li>
+                </ul>
+            }
+         </div>
+    </div>
 
-    @foreach (var song in Model.ListofSongs)
-     {
-       <ol>
-           <li>@song</li>
-       </ol>
-     }
-
-
-    @foreach (var review in Model.Review)
-    {
-        <p>
-            @review.Content | @review.ReviewerName | @review.Rating
-
-        </p>
-
-    }
-
-
-
-    @*<p>Song List</p>
-        <ol>
-            <li>  </li>
-            <li> Sad But True</li>
-            <li> Holier Than Thou</li>
-            <li> The Unforgiven</li>
-            <li> Wherever I May Roam</li>
-            <li> Don't Tread on Me </li>
-            <li> Through the Never </li>
-            <li> Nothing Else Matters </li>
-            <li> Of Wolf and Man</li>
-            <li> The God That Failed </li>
-            <li> My Friend of Misery</li>
-            <li> The Struggle Within</li>
-        </ol>*@
-
-
+    <p>Description: @Model.Description.</p>
+    
+    <hr />
+    <h3>Reviews</h3>
+    <div class="ReviewContainer">
+        @foreach (var review in Model.Review)
+        {
+            <ul>
+                <li>Rating: @review.Rating</li>
+                <li>Review: @review.Content</li>
+                <li>UserName: @review.ReviewerName</li>
+            </ul>
+        }
+    </div>
 
 </body>
 </html>

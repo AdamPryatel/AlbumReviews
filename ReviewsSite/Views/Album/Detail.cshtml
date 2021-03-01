@@ -9,19 +9,30 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    
 </head>
 <body>
     <h1>Album List</h1>
-    <h2>Name: @Model.Name</h2>
-    <h3>Band: @Model.BandName</h3>
+    <p>Name: @Model.Name</p>
+    <p>Band: @Model.BandName</p>
     <p>Description: @Model.Description. <img src="~/@Model.Image" width="250" /></p>
 
     @foreach (var song in Model.ListofSongs)
-    {
-        <p>@song</p>
-        @*<p>testing</p>*@
-    }
+     {
+       <ol>
+           <li>@song</li>
+       </ol>
+     }
 
+
+    @foreach (var review in Model.Review)
+    {
+        <p>
+            @review.Content | @review.ReviewerName | @review.Rating
+
+        </p>
+
+    }
 
 
 

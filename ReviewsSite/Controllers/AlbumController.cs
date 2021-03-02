@@ -47,6 +47,11 @@ namespace ReviewsSite.Controllers
             return View(album);
         }
 
+        public ViewResult Create()
+        {
+            return View(new Album());
+        }
+
 
     }
 }

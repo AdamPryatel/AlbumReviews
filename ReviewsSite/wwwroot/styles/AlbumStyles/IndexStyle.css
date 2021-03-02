@@ -1,0 +1,38 @@
+﻿body {
+
+}
+
+
+nav {
+    background-color: #32CD32;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    font-size: 2em;
+
+}
+
+h1 {
+    padding-top:3em;
+}
+
+ ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    margin:0;
+    padding:0;
+
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+    a:hover {
+        color: #32CD32;
+        background-color: #000;
+    }

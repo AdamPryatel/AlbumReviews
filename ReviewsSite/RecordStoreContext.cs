@@ -57,13 +57,22 @@ namespace ReviewsSite
                     Description = "Publishied on Febuary 28 2018 Apashe lines one up for the home team as he drops his largest release on Kannibalen Records yet. A conceptual project that combines his usual love of hip-hop-infused bass with the orchestral influences of Mozart, the aptly titled Requiem project brings on the dancefloor heat while also smashing it on the production tip—from recording live instruments in cavernous churches to controlling the mixing and mastering of the EP with his untouchable ear. Expect to hear plenty of the three tracks being dropped alongside label mates Black Tiger Sex Machine as they embark on their otherworldly Ceremony Tour.",
                     SongsString = "Majesty feat. Wasiu (feat. Wasiu), Dies Irae feat. Black Prez (feat. Black Prez), Lacrimosa",
                     Image = "Images/1st album.jpg"
-
-
-
-
-
-
-
+                }, new Album()
+                {
+                    Id = 5,
+                    Name = "Through Being Cool",
+                    BandName = "Saves the Day",
+                    Description = "Through Being Cool is the second studio album by American rock band Saves the Day, released on November 2, 1999 by Equal Vision. The songs on Through Being Cool were written while the band members attended New York University. The album was recorded in 11 days and represented the band's transition from a melodic hardcore sound to a more pop punk style. It was produced by Steve Evetts at Trax East Recording Studio in South River, New Jersey.",
+                    SongsString = "All-Star Me, You Vandal, Shoulder to the Wheel, Rocks Tonic Juice Magic, Holly Hox Forget Me Nots, Third Engine, My Sweet Fracture, The Vast Spoils of America (From the Badlands through the Ocean), The Last Lie I Told, Do You Know What I Love the Most?, Through Being Cool, Banned from the Back Porch",
+                    Image = "Images/STD TBC.jpg"
+                }, new Album()
+                {
+                    Id = 6,
+                    Name = "Pinkerton",
+                    BandName = "Weezer",
+                    Description = "Pinkerton is the second studio album by American rock band Weezer, released on September 24, 1996 by DGC Records. After abandoning plans for a rock opera entitled Songs from the Black Hole, Weezer recorded the album between songwriter Rivers Cuomo's terms at Harvard University, where he wrote most of the songs.",
+                    SongsString = "Tired of Sex, Getchoo, No Other One, Why Bother?, Across the Sea, The Good Life, El Scorcho, Pink Triangle, Falling for You, Butterfly",
+                    Image = "Images/WP.jpg"
                 });
 
             // Add more albums here
@@ -99,25 +108,47 @@ namespace ReviewsSite
                 Rating = 5,
                 Content = "Mightest three song album of It's genre",
                 ReviewerName = "Bruce Wayne"
-
+            },
+            new Review()
+            {
+                Id = 5,
+                AlbumId = 5,
+                Rating = 5,
+                Content = "I'm so proud of my boy! He worked so hard and did such a good job!",
+                ReviewerName = "Chris Conley's mom"
+            },
+            new Review()
+            {
+                Id = 6,
+                AlbumId = 5,
+                Rating = 1,
+                Content = "Lol, you listen to pop punk?",
+                ReviewerName = "Jake Ebinger"
+            },
+            new Review()
+            {
+                Id = 7,
+                AlbumId = 6,
+                Rating = 4,
+                Content = "I Love this album! I listen to it while I'm cryogenically frozen between Christmas'.",
+                ReviewerName = "Michael Buble"
+            },
+            new Review()
+            {
+                Id = 8,
+                AlbumId = 6,
+                Rating = 5,
+                Content = "Such a good album. You have to check it out!",
+                ReviewerName = "Jeremy Leuenberger"
+            },
+            new Review()
+            {
+                Id = 9,
+                AlbumId = 6,
+                Rating = 5,
+                Content = "This was their last good album.",
+                ReviewerName = "Every Weezer Fan Ever"
             });
-
-
-
-
-
-
-
-
-
-
-
-
-                // review
-                // Id = reviewId
-                //context = reviewcontext
-                // AlbumId
-
         }
     }
 }

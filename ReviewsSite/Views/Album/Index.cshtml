@@ -10,50 +10,36 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link rel="stylesheet" href="~/styles/AlbumStyles/IndexStyle.css">
 </head>
 <body>
-    <p><a href="/Album/Detail">Album Detail
-      
-        </a>
-        </p>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Add Review</a></li>
+            <li><a href="">Creators</a></li>
+        </ul>
+    </nav>
+
+    <h1>Album Reviews</h1>
+    <h3>Albums</h3>
+    @foreach (var Album in Model)
+    {
+        <p><a href="/Album/Detail/@Album.Id"><img src="~/@Album.Image" width="250" /></a></p>
+        <p><a href="/Album/Detail/@Album.Id">@Album.Name by @Album.BandName</a></p>
+    }
+
+
+    @*<p><a href="/Album/Detail/">Album Details</a></p>*@
+
     @*<h1>Album List</h1>
-    <h2>Name: @Model.Name</h2>
-    <h3>Band: @Model.BandName</h3>
-    <p>Description: @Model.Description. <img src="~/Images/Metallica-Black-Album.jpg" /> </p>*@
-    <p>Song List</p>
-    <ol>
-        <li> Enter Sandman </li>
-        <li> Sad But True</li>
-        <li> Holier Than Thou</li>
-        <li> The Unforgiven</li>
-        <li> Wherever I May Roam</li>
-        <li> Don't Tread on Me </li>
-        <li> Through the Never </li>
-        <li> Nothing Else Matters </li>
-        <li> Of Wolf and Man</li>
-        <li> The God That Failed </li>
-        <li> My Friend of Misery</li>
-        <li> The Struggle Within</li>
-    </ol>
+        <h2>Name: @Model.Name</h2>
+        <h3>Band: @Model.BandName</h3>
+        <p>Description: @Model.Description. <img src="~/Images/Metallica-Black-Album.jpg" /> </p>*@
 
     @*<h2>Name: @Model.Name</h2>
-    <h3>Band: @Model.BandName</h3>
-    <p>Description: @Model.Description. <img src="~/Images/Metallica-Black-Album.jpg" /> </p>*@
-    <p>Song List</p>
-    <ol>
-        <li> Enter Sandman </li>
-        <li> Sad But True</li>
-        <li> Holier Than Thou</li>
-        <li> The Unforgiven</li>
-        <li> Wherever I May Roam</li>
-        <li> Don't Tread on Me </li>
-        <li> Through the Never </li>
-        <li> Nothing Else Matters </li>
-        <li> Of Wolf and Man</li>
-        <li> The God That Failed </li>
-        <li> My Friend of Misery</li>
-        <li> The Struggle Within</li>
-    </ol>
+        <h3>Band: @Model.BandName</h3>
+        <p>Description: @Model.Description. <img src="~/Images/Metallica-Black-Album.jpg" /> </p>*@
 
 
 </body>

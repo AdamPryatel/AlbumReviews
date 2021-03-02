@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReviewsSite;
 
 namespace ReviewsSite.Migrations
 {
     [DbContext(typeof(RecordStoreContext))]
-    partial class RecordStoreContextModelSnapshot : ModelSnapshot
+    [Migration("20210228204456_newermig")]
+    partial class newermig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,34 +57,14 @@ namespace ReviewsSite.Migrations
                             Description = "Is the fifth studio album by American heavy metal band Metallica, released on August 12, 1991 through Elektra Records.It was recorded in an eight - month span at One on One Recording Studios in Los Angeles.",
                             Image = "Images/Metallica-Black-Album.jpg",
                             Name = "The Black Album",
-                            SongsString = "Enter Sandman, Sad But True, Holier Than Thou, The Unforgiven, Wherever I May Roam, Don't Tread on Me, Through the Never, Nothing Else Matters, Of Wolf and Man, The God That Failed, My Friend of Misery, The Struggle Within"
+                            SongsString = "Enter Sandman , Sad But True, Holier Than Thou, The Unforgiven, Wherever I May Roam, Don't Tread on Me, Through the Never, Nothing Else Matters, Of Wolf and Man, The God That Failed, My Friend of Misery, The Struggle Within"
                         },
                         new
                         {
                             Id = 2,
                             BandName = "Kid Cudi",
                             Description = "Is the seventh studio album by American rapper Kid Cudi. It was released on December 11, 2020 by Republic Records. It is the final installment of Cudi's Man on the Moon trilogy of albums.",
-                            Image = "Images/Man_on_the_Moon_III.jpg",
-                            Name = "Man on the Moon 3",
-                            SongsString = "Beautiful Trip, Tequila Shots, Another Day, She Knows This, Dive, Damaged, Heaven On Earth, Show Out, Solo Dolo, Pt. III, Sad People, Elsie's Baby Boy (flashback), Sept. 16, The Void, Lovin' Me, The Pale Moonlight, Rockstar Knights, 4 Da Kidz, Lord I Know"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            BandName = "Biggie Smalls",
-                            Description = "Ready to Die is the debut studio album by American rapper The Notorious B.I.G., released on September 13, 1994, by Bad Boy Records and Arista Records. The album features productions by Yung Chedder (James Ryan), Bad Boy founder Sean Puffy Combs, Easy Mo Bee, Chucky Thompson, DJ Premier, and Lord Finesse, among others. It was recorded from 1993 to 1994 at The Hit Factory and D&D Studios in New York City",
-                            Image = "Images/2nd album.jpg",
-                            Name = "Ready To Die",
-                            SongsString = "Intro, The What, Unbelievable, Things Done Changed, Juicy, One more chance, Warning, Everyday Struggle, Respect, Suicidal Thoughts, Friend of Me, Gimme the Loot, Machine Gun Funk,Ready To Die, Me & My Bitch, Big Poppa, F*ck Me, Just Playing, Who Shot Ya, Warning, Friend of Mine "
-                        },
-                        new
-                        {
-                            Id = 4,
-                            BandName = "Apashe",
-                            Description = "Publishied on Febuary 28 2018 Apashe lines one up for the home team as he drops his largest release on Kannibalen Records yet. A conceptual project that combines his usual love of hip-hop-infused bass with the orchestral influences of Mozart, the aptly titled Requiem project brings on the dancefloor heat while also smashing it on the production tip—from recording live instruments in cavernous churches to controlling the mixing and mastering of the EP with his untouchable ear. Expect to hear plenty of the three tracks being dropped alongside label mates Black Tiger Sex Machine as they embark on their otherworldly Ceremony Tour.",
-                            Image = "Images/1st album.jpg",
-                            Name = "Requiem",
-                            SongsString = "Majesty feat. Wasiu (feat. Wasiu), Dies Irae feat. Black Prez (feat. Black Prez), Lacrimosa"
+                            Name = "Man on the Moon 3"
                         });
                 });
 
@@ -131,18 +113,10 @@ namespace ReviewsSite.Migrations
                         new
                         {
                             Id = 3,
-                            AlbumId = 3,
-                            Content = "Best of its time",
-                            Rating = 5,
+                            AlbumId = 2,
+                            Content = "Eh, Could I see the manager?",
+                            Rating = 2,
                             ReviewerName = "Karen"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            AlbumId = 4,
-                            Content = "Mightest three song album of It's genre",
-                            Rating = 5,
-                            ReviewerName = "Bruce Wayne"
                         });
                 });
 

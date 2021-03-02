@@ -1,4 +1,5 @@
 ﻿@model ReviewsSite.Models.Album
+
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
@@ -8,12 +9,36 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link rel="stylesheet" href="~/styles/AlbumStyles/DetailStyle.css">
 </head>
 <body>
-    <h1>Album List</h1>
-    <h2>Name: @Model.Name</h2>
-    <h3>Band: @Model.BandName</h3>
-    <p>Description: @Model.Description. <img src="~/Images/Metallica-Black-Album.jpg" /> </p>
+    <h1>@Model.Name by @Model.BandName</h1>
+    <div class="Container">
+        <p><img src="~/@Model.Image" width="350" /></p>
+        <div class="songList">
+            @foreach (var song in Model.ListofSongs)
+            {
+                <ul>
+                    <li>@song</li>
+                </ul>
+            }
+         </div>
+    </div>
+
+    <p>Description: @Model.Description.</p>
+    
+    <hr />
+    <h3>Reviews</h3>
+    <div class="ReviewContainer">
+        @foreach (var review in Model.Review)
+        {
+            <ul>
+                <li>Rating: @review.Rating</li>
+                <li>Review: @review.Content</li>
+                <li>UserName: @review.ReviewerName</li>
+            </ul>
+        }
+    </div>
 
 </body>
 </html>

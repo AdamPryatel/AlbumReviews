@@ -8,7 +8,9 @@ namespace ReviewsSite.Models
     public class Album
     {
 
-        //public List<Album> ListofAlbums = new List<Album>();
+        public string SongsString { get; set; }          // song list, public string lsit of songs - array return empty array(get)
+
+        public List<string> ListofSongs { get { return SongsString.Split(',').ToList(); } }
 
 
         public int Id { get; set; }
@@ -21,19 +23,31 @@ namespace ReviewsSite.Models
         
         public string Category { get; set; }
 
-        public string Review { get; set; }
+        //public string Review { get; set; }
+
+        public string Image { get; set; }
+
+        //public virtual List<Review> Reviews { get; set; }
+
+        public virtual ICollection<Review> Review { get; set; }
+
+
 
         public Album()
         {
         }
 
-        public Album(int id, string name, string description, string bandName)
+        public Album(int id, string name, string description, string bandName, string songsString, string image)
         {
             Id = id;
             Name = name;
             Description = description;
             BandName = bandName;
+            SongsString = songsString;
+            Image = image;
         }
+
+
 
     }
 

@@ -41,7 +41,7 @@ namespace ReviewsSite.Controllers
             return View(albumList);
         }
 
-        public ViewResult Details(int id)
+        public ViewResult Detail(int id)
         {
             var album = albumRepo.GetById(id);
             return View(album);

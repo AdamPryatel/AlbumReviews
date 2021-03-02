@@ -22,5 +22,9 @@ namespace ReviewsSite.Controllers
             
             return View(reviewRepo.GetReviewsByAlbumId(albumId));
         }
+
+
+    
+
     }
 }

@@ -52,6 +52,12 @@ namespace ReviewsSite.Controllers
             return View(new Album());
         }
 
+        [HttpPost]
+        public ViewResult Create(Album model)
+        {
+            albumRepo.Create(model);
+            return View(model);
+        }
 
     }
 }

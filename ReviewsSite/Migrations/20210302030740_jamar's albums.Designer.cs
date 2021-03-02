@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReviewsSite;
 
 namespace ReviewsSite.Migrations
 {
     [DbContext(typeof(RecordStoreContext))]
-    partial class RecordStoreContextModelSnapshot : ModelSnapshot
+    [Migration("20210302030740_jamar's albums")]
+    partial class jamarsalbums
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -74,15 +76,6 @@ namespace ReviewsSite.Migrations
                             Image = "Images/2nd album.jpg",
                             Name = "Ready To Die",
                             SongsString = "Intro, The What, Unbelievable, Things Done Changed, Juicy, One more chance, Warning, Everyday Struggle, Respect, Suicidal Thoughts, Friend of Me, Gimme the Loot, Machine Gun Funk,Ready To Die, Me & My Bitch, Big Poppa, F*ck Me, Just Playing, Who Shot Ya, Warning, Friend of Mine "
-                        },
-                        new
-                        {
-                            Id = 4,
-                            BandName = "Apashe",
-                            Description = "Publishied on Febuary 28 2018 Apashe lines one up for the home team as he drops his largest release on Kannibalen Records yet. A conceptual project that combines his usual love of hip-hop-infused bass with the orchestral influences of Mozart, the aptly titled Requiem project brings on the dancefloor heat while also smashing it on the production tip—from recording live instruments in cavernous churches to controlling the mixing and mastering of the EP with his untouchable ear. Expect to hear plenty of the three tracks being dropped alongside label mates Black Tiger Sex Machine as they embark on their otherworldly Ceremony Tour.",
-                            Image = "Images/1st album.jpg",
-                            Name = "Requiem",
-                            SongsString = "Majesty feat. Wasiu (feat. Wasiu), Dies Irae feat. Black Prez (feat. Black Prez), Lacrimosa"
                         });
                 });
 
@@ -135,14 +128,6 @@ namespace ReviewsSite.Migrations
                             Content = "Best of its time",
                             Rating = 5,
                             ReviewerName = "Karen"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            AlbumId = 4,
-                            Content = "Mightest three song album of It's genre",
-                            Rating = 5,
-                            ReviewerName = "Bruce Wayne"
                         });
                 });
 

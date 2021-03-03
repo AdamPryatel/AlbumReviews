@@ -24,7 +24,7 @@ namespace ReviewsSite.Controllers
             return View(reviewRepo.GetReviewsByAlbumId(albumId));
         }
 
-        public ViewResult Create()
+        public ViewResult Create(int id)
         {
             var albums = reviewRepo.PopulateAlbumList();
 
@@ -33,7 +33,7 @@ namespace ReviewsSite.Controllers
             int[] Ratings = { 1, 2, 3, 4, 5 };
             ViewBag.Ratings = new SelectList(Ratings);
 
-            return View(new Review());
+            return View(new Review(){ AlbumId = id });
         }
 
         [HttpPost]
@@ -50,9 +50,29 @@ namespace ReviewsSite.Controllers
             return View(model);
         }
 
+        public ActionResult Delete(int id)
+        {
+            var review = reviewRepo.GetById(id);
+            reviewRepo.Delete(review);
+            return RedirectToAction("Detail", "Album", new {id = review.AlbumId} );     // Action, Controller, Variables
+        }
 
 
-    
+
+        public ViewResult CreateByAlbumId(int albumId)
+        {
+            var albums = reviewRepo.PopulateAlbumList();
+
+            ViewBag.Albums = new SelectList(albums, "Id", "Name");
+
+            int[] Ratings = { 1, 2, 3, 4, 5 };
+            ViewBag.Ratings = new SelectList(Ratings);
+
+            return View(new Review() { AlbumId = albumId }) ;
+        }
+
+
+     
 
     }
 }

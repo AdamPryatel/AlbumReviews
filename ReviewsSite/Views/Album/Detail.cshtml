@@ -37,10 +37,15 @@
                 <li>Review: @review.Content</li>
                 <li>UserName: @review.ReviewerName</li>
             </ul>
+
+            <a href ="/Review/Delete/@review.Id">Delete Review</a>
+
         }
+
     </div>
 
-    <p><a href ="/Review/Create">Add Review</a></p>
+    <p><a href ="/Review/CreateByAlbumId/?albumId=@Model.Id">Add Review</a></p>
+
 
 </body>
 </html>

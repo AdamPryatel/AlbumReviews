@@ -12,6 +12,7 @@ namespace ReviewsSite.Models
  
 
         public int Id { get; set; }
+        [Display(Name = "Review")]
         public string Content { get; set; }     // comment box?
         public string ReviewerName { get; set; }
         public int Rating { get; set; }

@@ -30,6 +30,9 @@ namespace ReviewsSite.Controllers
 
             ViewBag.Albums = new SelectList(albums, "Id", "Name");
 
+            int[] Ratings = { 1, 2, 3, 4, 5 };
+            ViewBag.Ratings = new SelectList(Ratings);
+
             return View(new Review());
         }
 
@@ -38,6 +41,9 @@ namespace ReviewsSite.Controllers
         {
             var albums = reviewRepo.PopulateAlbumList();
             ViewBag.Albums = new SelectList(albums, "Id", "Name");
+
+            int[] Ratings = { 1, 2, 3, 4, 5};
+            ViewBag.Ratings = new SelectList(Ratings);
 
             reviewRepo.Create(model);
             ViewBag.Result = "Thanks for your review!";

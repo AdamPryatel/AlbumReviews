@@ -38,6 +38,11 @@ namespace ReviewsSite.Repositories
             return _db.Set<T>().Find(id);
         }
 
+        public List<Review> PopulateReviewList()
+        {
+            return _db.Set<Review>().ToList();
+        }
+
         public List<Review> GetReviewsByAlbumId(int albumId)
         {
             return _db.Set<Review>().Where(f => f.AlbumId == albumId).ToList();

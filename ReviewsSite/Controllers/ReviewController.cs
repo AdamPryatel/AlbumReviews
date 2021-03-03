@@ -26,7 +26,7 @@ namespace ReviewsSite.Controllers
 
         public ViewResult Create()
         {
-            var albums = reviewRepo.PopulateReviewList();
+            var albums = reviewRepo.PopulateAlbumList();
 
             ViewBag.Albums = new SelectList(albums, "Id", "Name");
 
@@ -36,7 +36,7 @@ namespace ReviewsSite.Controllers
         [HttpPost]
         public ViewResult Create(Review model)
         {
-            var albums = reviewRepo.PopulateReviewList();
+            var albums = reviewRepo.PopulateAlbumList();
             ViewBag.Albums = new SelectList(albums, "Id", "Name");
 
             reviewRepo.Create(model);

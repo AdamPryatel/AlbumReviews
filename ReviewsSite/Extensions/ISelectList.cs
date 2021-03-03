@@ -10,7 +10,7 @@ namespace ReviewsSite.Extensions
     {
         List<Review> GetReviewsByAlbumId(int albumId);
 
-        List<Review> PopulateReviewList();
+        List<Album> PopulateAlbumList();
 
 
     }

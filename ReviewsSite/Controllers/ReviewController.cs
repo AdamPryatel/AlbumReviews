@@ -50,14 +50,7 @@ namespace ReviewsSite.Controllers
             return View(model);
         }
 
-        public ActionResult Delete(int id)
-        {
-            var review = reviewRepo.GetById(id);
-            reviewRepo.Delete(review);
-            return RedirectToAction("Detail", "Album", new {id = review.AlbumId} );     // Action, Controller, Variables
-        }
-
-
+       
 
         public ViewResult CreateByAlbumId(int albumId)
         {
@@ -72,7 +65,49 @@ namespace ReviewsSite.Controllers
         }
 
 
-     
+        public ActionResult Delete(int id)
+        {
+            var review = reviewRepo.GetById(id);
+            reviewRepo.Delete(review);
+            return RedirectToAction("Detail", "Album", new { id = review.AlbumId });     // Action, Controller, Variables
+        }
+
+
+        public ViewResult Update(int id)
+        {
+            //var reviews = reviewRepo.PopulateAlbumList();
+
+            //ViewBag.Reviews = reviews;
+
+
+            var albums = reviewRepo.PopulateAlbumList();
+
+            ViewBag.Albums = new SelectList(albums, "Id", "Name");
+
+            int[] Ratings = { 1, 2, 3, 4, 5 };
+            ViewBag.Ratings = new SelectList(Ratings);
+
+
+            var review = reviewRepo.GetById(id);
+
+            return View(review);
+        }
+
+        [HttpPost]
+        public ViewResult Update(Review model)
+        {
+
+            var albums = reviewRepo.PopulateAlbumList();
+
+            ViewBag.Albums = new SelectList(albums, "Id", "Name");
+
+            int[] Ratings = { 1, 2, 3, 4, 5 };
+            ViewBag.Ratings = new SelectList(Ratings);
+
+            reviewRepo.Update(model);
+            ViewBag.Result = "You have successfuly upodated this review";
+            return View(model);
+        }
 
     }
 }

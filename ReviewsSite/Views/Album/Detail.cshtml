@@ -38,7 +38,9 @@
                 <li>UserName: @review.ReviewerName</li>
             </ul>
 
-            <a href ="/Review/Delete/@review.Id">Delete Review</a>
+            <a href="/Review/Update/@review.Id">Update Review</a>
+
+            <a href="/Review/Delete/@review.Id">Delete Review</a>
 
         }
 
@@ -46,6 +48,7 @@
 
     <p><a href ="/Review/CreateByAlbumId/?albumId=@Model.Id">Add Review</a></p>
 
+    
 
 </body>
 </html>

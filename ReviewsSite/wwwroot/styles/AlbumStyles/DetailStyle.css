@@ -7,17 +7,20 @@
     color: rgb(255, 255, 255);
 }
 
-body {
-
-
-
+html {
+    font-size: 16px;
+    background: rgb(34, 34, 34);
+    margin-top: 0em;
 }
 
+body {
+    text-align: center;
+}
 
-
-
-
-
+#mainBody {
+/*    max-width: 1050px;
+    width: auto;*/
+}
 
 nav {
     display: grid;
@@ -67,7 +70,37 @@ nav {
     padding: .075em;
 }
 
+.songList {
+    font-size: 11px;
+}
 
+h3 {
+    font-size: 35px;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+#ReviewContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+    font-size: 12.7px;
+    gap: 25px;
+    padding-bottom: .5em;
+}
+
+.reviewBox {
+    width: 250px;
+    height: 150px;
+    justify-content: center;
+    justify-items: center;
+    padding: 1.25em;
+    border-radius: 5.5px;
+    margin-bottom: 1em;
+    box-shadow: 0 0 5px rgb(77, 77, 77);
+}
 
 background {
 

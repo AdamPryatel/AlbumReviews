@@ -93,7 +93,7 @@ main {
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box;
-    padding: 2em 0;
+    padding: 0em 0;
 }
 
 

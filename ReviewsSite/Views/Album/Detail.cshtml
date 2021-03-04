@@ -27,44 +27,40 @@
     </header>
 
 
-
-    <h1>@Model.Name by @Model.BandName</h1>
-    <div class="Container">
-        <p><img src="~/@Model.Image" width="350" /></p>
-        <div class="songList">
-            @foreach (var song in Model.ListofSongs)
-            {
-                <ul>
-                    <li>@song</li>
-                </ul>
-            }
+    <section id="mainBody">
+        <div class="Container">
+            <p><img src="~/@Model.Image" width="350" /></p>
+            <h1>@Model.Name by @Model.BandName</h1>
+            <div class="songList">
+                @foreach (var song in Model.ListofSongs)
+                {
+                    <ul>
+                        <li>@song</li>
+                    </ul>
+                }
+            </div>
         </div>
-    </div>
 
-    <p>Description: @Model.Description.</p>
+        <p>Description: @Model.Description.</p>
 
-    <hr />
-    <h3>Reviews</h3>
-    <div class="ReviewContainer">
-        @foreach (var review in Model.Review)
-        {
-            <ul>
-                <li>Rating: @review.Rating Star</li>
-                <li>Review: @review.Content</li>
-                <li>UserName: @review.ReviewerName</li>
-            </ul>
+        <h3>Reviews</h3>
+        <div id="ReviewContainer">
+            @foreach (var review in Model.Review)
+            {
+                <article class="reviewBox">
+                    <p>Rating: @review.Rating Star</p>
+                    <p>Review: @review.Content</p>
+                    <p>UserName: @review.ReviewerName</p>
+                    <a href="/Review/Update/@review.Id">Update Review</a>
+                    <a href="/Review/Delete/@review.Id">Delete Review</a>
+                </article>
+            }
 
-            <a href="/Review/Update/@review.Id">Update Review</a>
+        </div>
 
-            <a href="/Review/Delete/@review.Id">Delete Review</a>
-
-        }
-
-    </div>
-
-    <p><a href="/Review/CreateByAlbumId/?albumId=@Model.Id">Add Review</a></p>
-
-
+        <p><a href="/Review/CreateByAlbumId/?albumId=@Model.Id">Add Review</a></p>
+    </section>
+    
 
 </body>
 </html>

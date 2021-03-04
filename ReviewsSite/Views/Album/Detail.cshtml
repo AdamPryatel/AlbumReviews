@@ -10,8 +10,24 @@
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
     <link rel="stylesheet" href="~/styles/AlbumStyles/DetailStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <header>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="/Album/Index">HOME</a></li>
+                <li><strong>|</strong></li>
+                <li><a href="/Review/Create/">ADD REVIEW</a></li>
+                <li><strong>|</strong></li>
+                <li><a href="">CREATORS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
     <h1>@Model.Name by @Model.BandName</h1>
     <div class="Container">
         <p><img src="~/@Model.Image" width="350" /></p>
@@ -22,11 +38,11 @@
                     <li>@song</li>
                 </ul>
             }
-         </div>
+        </div>
     </div>
 
     <p>Description: @Model.Description.</p>
-    
+
     <hr />
     <h3>Reviews</h3>
     <div class="ReviewContainer">
@@ -46,9 +62,9 @@
 
     </div>
 
-    <p><a href ="/Review/CreateByAlbumId/?albumId=@Model.Id">Add Review</a></p>
+    <p><a href="/Review/CreateByAlbumId/?albumId=@Model.Id">Add Review</a></p>
 
-    
+
 
 </body>
 </html>

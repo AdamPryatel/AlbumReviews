@@ -73,7 +73,36 @@ namespace ReviewsSite
                     Description = "Pinkerton is the second studio album by American rock band Weezer, released on September 24, 1996 by DGC Records. After abandoning plans for a rock opera entitled Songs from the Black Hole, Weezer recorded the album between songwriter Rivers Cuomo's terms at Harvard University, where he wrote most of the songs.",
                     SongsString = "Tired of Sex, Getchoo, No Other One, Why Bother?, Across the Sea, The Good Life, El Scorcho, Pink Triangle, Falling for You, Butterfly",
                     Image = "Images/WP.jpg"
-                });
+
+
+                
+                }, new Album()
+                {
+                    Id = 7,
+                    Name = "Lugal Ki En",
+                    BandName = "Rings of Saturn",
+                    Description = "Lugal Ki En is the third album by American deathcore band Rings of Saturn released on October 14, 2014. It was produced by Brette Ciamarra at Studio 344 in Pittsburgh, Pennsylvania and features guest solo work by Rusty Cooley from Day of Reckoning and custom artwork by Mark Cooper of Mind Rape Art, who also created the band's Dingir cover.",
+                    SongsString = "Senseless Massacre, Desolate Paradise, Lalassu Xul, Infused, Fractal Intake, Natural Selection, Beckon, Godless  Times, Unsympathetic Intellect, Eviscerate, The Heavens Have Fallen, No Pity for a Coward",
+                    Image = "Images/Lugal.jfif"
+                },    new Album()
+                {
+                     Id = 8,
+                     Name = "10.000 Days",
+                     BandName = "TOOL",
+                     Description = "10,000 Days is the fourth studio album by American rock band Tool. The album was released by Tool Dissectional and Volcano Entertainment on April 28, 2006 in parts of Europe, April 29, 2006 in Australia, May 1, 2006 in the United Kingdom, and on May 2, 2006 in North America.",
+                     SongsString = "Vicarious, Jambi, Wings for Marie(Pt1), 10,000 Days(Wings Pt2), The Pot, Lipan Conjuring, Lost Keys(Blame Hoffman), Rosetta Stoned, Intension, Right In Two, Viginti Tres",
+                     Image = "Images/10000 days.jfif"
+                },
+                 new Album()
+                 {
+                     Id = 9,
+                     Name = "A Moment Apart",
+                     BandName = "Odesza",
+                     Description = "A Moment Apart is the third studio album by the American electronic music duo ODESZA, released on 8 September 2017 through Counter, Ninja Tune and the duo's own label, Foreign Family Collective. It is the duo's first album in three years after their second album, In Return, and the first released through Foreign Family Collective.",
+                     SongsString = "Intro, A Moment Apart, Higher Ground, Boy, Line of Sight, Late Night, Across the Room, Meridian, Everything at your feet, Just a memory, Divide, Thin Floors and Tall Cielings, La Ciudad, Falls, Show Me, Corners of the Earth",
+                     Image = "Images/amap.jfif"
+                 }
+                 );
 
             // Add more albums here
             modelBuilder.Entity<Review>().HasData(
@@ -148,7 +177,26 @@ namespace ReviewsSite
                 Rating = 5,
                 Content = "This was their last good album.",
                 ReviewerName = "Every Weezer Fan Ever"
-            });
+            },
+                new Review()
+                {
+                    Id = 10,
+                    AlbumId = 9,
+                    Rating = 3,
+                    Content = "Hey Carlos, pick an album.",
+                    ReviewerName = "Trent"
+
+                },
+                new Review()
+                    {
+                        Id = 11,
+                        AlbumId = 9,
+                        Rating = 5,
+                        Content = "Any album? I like A Moment Apart by Odesza.",
+                        ReviewerName = "Carlos Lopez"
+
+
+                    });
         }
     }
 }

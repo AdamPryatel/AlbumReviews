@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReviewsSite;
 
 namespace ReviewsSite.Migrations
 {
     [DbContext(typeof(RecordStoreContext))]
-    partial class RecordStoreContextModelSnapshot : ModelSnapshot
+    [Migration("20210304190603_Carlos-Albu")]
+    partial class CarlosAlbu
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -228,22 +230,6 @@ namespace ReviewsSite.Migrations
                             Content = "This was their last good album.",
                             Rating = 5,
                             ReviewerName = "Every Weezer Fan Ever"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            AlbumId = 9,
-                            Content = "Hey Carlos, pick an album.",
-                            Rating = 3,
-                            ReviewerName = "Trent"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            AlbumId = 9,
-                            Content = "Any album? I like A Moment Apart by Odesza.",
-                            Rating = 5,
-                            ReviewerName = "Carlos Lopez"
                         });
                 });
 

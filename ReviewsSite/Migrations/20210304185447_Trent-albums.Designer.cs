@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReviewsSite;
 
 namespace ReviewsSite.Migrations
 {
     [DbContext(typeof(RecordStoreContext))]
-    partial class RecordStoreContextModelSnapshot : ModelSnapshot
+    [Migration("20210304185447_Trent-albums")]
+    partial class Trentalbums
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -119,15 +121,6 @@ namespace ReviewsSite.Migrations
                             Image = "Images/10000 days.jfif",
                             Name = "10.000 Days",
                             SongsString = "Vicarious, Jambi, Wings for Marie(Pt1), 10,000 Days(Wings Pt2), The Pot, Lipan Conjuring, Lost Keys(Blame Hoffman), Rosetta Stoned, Intension, Right In Two, Viginti Tres"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            BandName = "Odesza",
-                            Description = "A Moment Apart is the third studio album by the American electronic music duo ODESZA, released on 8 September 2017 through Counter, Ninja Tune and the duo's own label, Foreign Family Collective.[1] It is the duo's first album in three years after their second album, In Return, and the first released through Foreign Family Collective.",
-                            Image = "Images/amap.jfif",
-                            Name = "A Moment Apart",
-                            SongsString = "Intro, A Moment Apart, Higher Ground, Boy, Line of Sight, Late Night, Across the Room, Meridian, Everything at your feet, Just a memory, Divide, Thin Floors and Tall Cielings, La Ciudad, Falls, Show Me, Corners of the Earth"
                         });
                 });
 
@@ -228,22 +221,6 @@ namespace ReviewsSite.Migrations
                             Content = "This was their last good album.",
                             Rating = 5,
                             ReviewerName = "Every Weezer Fan Ever"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            AlbumId = 9,
-                            Content = "Hey Carlos, pick an album.",
-                            Rating = 3,
-                            ReviewerName = "Trent"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            AlbumId = 9,
-                            Content = "Any album? I like A Moment Apart by Odesza.",
-                            Rating = 5,
-                            ReviewerName = "Carlos Lopez"
                         });
                 });
 

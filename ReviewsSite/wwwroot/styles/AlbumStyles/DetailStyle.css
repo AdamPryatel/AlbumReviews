@@ -13,13 +13,55 @@ html {
     margin-top: 0em;
 }
 
+h1 {
+    color: rgb(224, 87, 23);
+    font-size: 49px;
+    padding-bottom: .5em;
+    font-family: 'Germania One', cursive;
+    text-shadow: 2px -2px 1px rgb(255, 255, 255);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    padding: 0em 0;
+}
+
 body {
     text-align: center;
 }
 
+.col-md-4 {
+    color: rgb(34, 34, 34);
+}
+
+.text-success {
+    color: rgb(34, 34, 34);
+}
+
 #mainBody {
-/*    max-width: 1050px;
-    width: auto;*/
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: auto auto;
+    max-width: 1000px;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+#mainBody h3 {
+    color: rgb(224, 87, 23);
+    font-size: 49px;
+    font-family: 'Germania One', cursive;
+    text-shadow: 2px -2px 1px rgb(255, 255, 255);
 }
 
 nav {
@@ -33,6 +75,7 @@ nav {
     height: 30px;
     width: 100%;
     background: rgb(34, 34, 34);
+
 }
 
 .nav_links {
@@ -70,14 +113,35 @@ nav {
     padding: .075em;
 }
 
+img {
+    height: 350px;
+    width: 350px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgb(77, 77, 77);
+}
+
+h5{
+    padding-bottom: .5em;
+}
+
 .songList {
     font-size: 11px;
+    padding-bottom: 2em;
+}
+
+.songList li {
+    list-style-type: none;
 }
 
 h3 {
     font-size: 35px;
     padding-top: .5em;
     padding-bottom: .5em;
+}
+
+#Container {
+    border-bottom: 3px solid rgb(224, 87, 23);
+    padding-bottom: 2em;
 }
 
 #ReviewContainer {
@@ -102,60 +166,22 @@ h3 {
     box-shadow: 0 0 5px rgb(77, 77, 77);
 }
 
-background {
 
-
-
-
+a:hover {
+    text-decoration: none;
+    color: rgb(224, 87, 23);
+    font-weight: bolder;
 }
 
-header {
-
-
-
+footer {
+    margin-top: 2em;
+    margin-bottom: 0;
+    color: rgb(255, 255, 255);
+    padding: 2em 0 1em 0;
+    text-align: center;
+    font-size: .8em;
+    width: 100%;
+    margin: 0 auto;
+    font-weight: lighter;
+    letter-spacing: .01em;
 }
-
-p {
-
-
-
-}
-.container {
-
-
-
-
-}
-img {
-
-
-
-
-}
-.songList{
-
-
-
-
-
-}
-
-.ReviewContainer {
-
-
-
-}
-
-ul{
-
-
-
-}
-
-h1 h3 {
-
-
-
-
-}
-

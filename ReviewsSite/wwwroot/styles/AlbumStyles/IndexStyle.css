@@ -47,7 +47,7 @@ nav {
 }
 
 .nav_links li a {
-    text-decoration: none;
+     text-decoration: none;
      color: rgb(224, 87, 23);
      border-radius: 5px;
      font-size: large;
@@ -100,8 +100,9 @@ main {
 
 h1 {
     color: rgb(255, 255, 255);
-    font-size: 69px;
-    text-shadow: 0 0 5px rgb(224, 87, 23);
+    font-size: 89px;
+    text-shadow: 3px -3px 3px rgb(224, 87, 23);
+    font-family: 'Germania One', cursive;
 }
 
 #middlePage {
@@ -121,6 +122,8 @@ h1 {
 h2 {
     color: rgb(224, 87, 23);
     font-size: 49px;
+    font-family: 'Germania One', cursive;
+    text-shadow: 2px -2px 1px rgb(255, 255, 255);
 }
 
 #allAlbums h2 {
@@ -163,6 +166,14 @@ h2 {
     box-shadow: 0 0 5px rgb(77, 77, 77);
 }
 
+.box img:hover {
+    height: 305px;
+    width: 305px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px rgb(87, 87, 87);
+    
+}
+
 a{
     text-decoration: none;
     padding-bottom: 1.5em;
@@ -170,6 +181,11 @@ a{
     color: rgb(255, 255, 255);
     font-weight: lighter;
 
+}
+
+a:hover {
+    color: rgb(224, 87, 23);
+    font-weight: bolder;
 }
 
 footer {

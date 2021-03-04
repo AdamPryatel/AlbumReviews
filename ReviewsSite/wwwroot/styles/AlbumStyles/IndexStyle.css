@@ -105,8 +105,14 @@ h1 {
 }
 
 #middlePage {
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
     margin: auto auto;
-    width: 1050px;
+    max-width: 1050px;
+    width: auto;
     text-align: center;
     letter-spacing: .015em;
     border-bottom: 3px solid rgb(224, 87, 23);

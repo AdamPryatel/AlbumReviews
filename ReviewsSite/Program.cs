@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace ReviewsSite           // Test
+namespace ReviewsSite         
 {
 
     public class Program

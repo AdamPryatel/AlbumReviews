@@ -28,7 +28,6 @@ namespace ReviewsSite
         {
             services.AddMvc();
             services.AddDbContext<RecordStoreContext>();
-            //services.AddScoped<IRepository<Album>, AlbumRepository>();
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         }
 

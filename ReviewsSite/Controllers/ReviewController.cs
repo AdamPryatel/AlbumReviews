@@ -69,17 +69,12 @@ namespace ReviewsSite.Controllers
         {
             var review = reviewRepo.GetById(id);
             reviewRepo.Delete(review);
-            return RedirectToAction("Detail", "Album", new { id = review.AlbumId });     // Action, Controller, Variables
+            return RedirectToAction("Detail", "Album", new { id = review.AlbumId });
         }
 
 
         public ViewResult Update(int id)
         {
-            //var reviews = reviewRepo.PopulateAlbumList();
-
-            //ViewBag.Reviews = reviews;
-
-
             var albums = reviewRepo.PopulateAlbumList();
 
             ViewBag.Albums = new SelectList(albums, "Id", "Name");

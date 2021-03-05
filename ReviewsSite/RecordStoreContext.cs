@@ -131,7 +131,6 @@ namespace ReviewsSite
                  }
                  );
 
-            // Add more albums here
             modelBuilder.Entity<Review>().HasData(
             new Review()
             {
@@ -221,8 +220,6 @@ namespace ReviewsSite
                         Rating = 5,
                         Content = "Any album? I like A Moment Apart by Odesza.",
                         ReviewerName = "Carlos Lopez"
-
-
                     });
         }
     }

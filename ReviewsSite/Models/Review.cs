@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace ReviewsSite.Models
 {
-    public class Review     // for a specific album
+    public class Review     
     {
 
  
 
         public int Id { get; set; }
         [Display(Name = "Review")]
-        public string Content { get; set; }     // comment box?
+        public string Content { get; set; }     
         public string ReviewerName { get; set; }
         public int Rating { get; set; }
 
@@ -22,7 +22,7 @@ namespace ReviewsSite.Models
         public int AlbumId { get; set; }
         public virtual Album Album { get; set; }
 
-        //public virtual ICollection<Album> Albums { get; set; }
+        
 
 
 

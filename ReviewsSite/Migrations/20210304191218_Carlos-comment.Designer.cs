@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReviewsSite;
 
 namespace ReviewsSite.Migrations
 {
     [DbContext(typeof(RecordStoreContext))]
-    partial class RecordStoreContextModelSnapshot : ModelSnapshot
+    [Migration("20210304191218_Carlos-comment")]
+    partial class Carloscomment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -124,37 +126,10 @@ namespace ReviewsSite.Migrations
                         {
                             Id = 9,
                             BandName = "Odesza",
-                            Description = "A Moment Apart is the third studio album by the American electronic music duo ODESZA, released on 8 September 2017 through Counter, Ninja Tune and the duo's own label, Foreign Family Collective. It is the duo's first album in three years after their second album, In Return, and the first released through Foreign Family Collective.",
+                            Description = "A Moment Apart is the third studio album by the American electronic music duo ODESZA, released on 8 September 2017 through Counter, Ninja Tune and the duo's own label, Foreign Family Collective.[1] It is the duo's first album in three years after their second album, In Return, and the first released through Foreign Family Collective.",
                             Image = "Images/amap.jfif",
                             Name = "A Moment Apart",
                             SongsString = "Intro, A Moment Apart, Higher Ground, Boy, Line of Sight, Late Night, Across the Room, Meridian, Everything at your feet, Just a memory, Divide, Thin Floors and Tall Cielings, La Ciudad, Falls, Show Me, Corners of the Earth"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            BandName = "The Shining",
-                            Description = "The Shining is a 1980 psychological horror film produced and directed by Stanley Kubrick and co-written with novelist Diane Johnson. The film is based on Stephen King's 1977 novel of the same name and stars Jack Nicholson, Shelley Duvall, Scatman Crothers, and Danny Lloyd.",
-                            Image = "Images/TheShining.jpg",
-                            Name = "Original Sound Track",
-                            SongsString = "The Shining - Main Title, Rocky Mountains, Lontano, Music for Strings Percussion And Celesta, Utrenja (Exerpt), The Awakening Of Jacob, De Natura Sonoris No. 2, Home"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            BandName = "Lin-Manuel Miranda",
-                            Description = "Hamilton is the cast album to the 2015 musical Hamilton. The musical is based on the 2004 biography of Alexander Hamilton written by Ron Chernow, with music, lyrics, and book by Lin-Manuel Miranda.",
-                            Image = "Images/Hamilton.jpg",
-                            Name = "Hamilton",
-                            SongsString = "Alexander Hamilton, Aaron Burr Sir, My Shot, The Story Of Tonight, The Schuyler Sisters, Farmer Refuted, You'll Be Back, Right Hand Man, A Winter's Ball , Helpless, Satisfied, The Story of Tonight (Reprise), Wait For It, Stay Alive, Ten Duel Commandments, Meet Me Inside, That Would Be Enough Guns and Ships, History Has Its Eyes On You, Yorktown (The World Turned Upside Down), What Comes Next, Dear Theodosia, Non-Stop"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            BandName = "Pizza Kids",
-                            Description = "We Like Pizza by the Pizza Kids from the album We Like Pizza. In this song they highlight many of the wonders of the Italian dish, pizza, They sing about the toppings and the time of day that they like their pizza. It is shown that these children have a strange obsession to the pizza and worship it on a daily basis, in the morning and in the evening. It is a very modern song for it’s time because it underlines many things that children enjoy, such as pizza.",
-                            Image = "Images/Pizza.jpg",
-                            Name = "We Like Pizza",
-                            SongsString = "We Like Pizza (Frozen Version), We Like Pizza (Happy Version), We Like Pizza (Waves Version)"
                         });
                 });
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace ReviewsSite.Models
 {
@@ -23,15 +24,9 @@ namespace ReviewsSite.Models
         
         public string Category { get; set; }
 
-        //public string Review { get; set; }
-
         public string Image { get; set; }
 
-        //public virtual List<Review> Reviews { get; set; }
-
         public virtual ICollection<Review> Review { get; set; }
-
-
 
         public Album()
         {

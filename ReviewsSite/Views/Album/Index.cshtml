@@ -11,36 +11,47 @@
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
     <link rel="stylesheet" href="~/styles/AlbumStyles/IndexStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Germania+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Add Review</a></li>
-            <li><a href="">Creators</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="/Album/Index">HOME</a></li>
+                <li><strong>|</strong></li>
+                <li><a href="/Review/Create/">ADD REVIEW</a></li>
+                <li><strong>|</strong></li>
+                <li><a href="">CREATORS</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h1>Album Reviews</h1>
-    <h3>Albums</h3>
-    @foreach (var Album in Model)
-    {
-        <p><a href="/Album/Detail/@Album.Id"><img src="~/@Album.Image" width="250" /></a></p>
-        <p><a href="/Album/Detail/@Album.Id">@Album.Name by @Album.BandName</a></p>
-    }
+    <main>
+        <section id="topPage">
+            <h1>WCCI ALBUM REVIEWS</h1>
+        </section>
 
+        <section id="middlePage">
+            <section id="allAlbums">
+                <h2>ALBUMS</h2>
+                <div id="album">
+                    @foreach (var Album in Model)
+                    {
+                        <article class="box">
+                            <h3><a href="/Album/Detail/@Album.Id">@Album.Name by @Album.BandName</a></h3>
+                            <a href="/Album/Detail/@Album.Id"><img src="~/@Album.Image" width="350" /></a>
+                        </article>
+                    }
+                </div>
+            </section>
+        </section>
+    </main>
 
-    @*<p><a href="/Album/Detail/">Album Details</a></p>*@
-
-    @*<h1>Album List</h1>
-        <h2>Name: @Model.Name</h2>
-        <h3>Band: @Model.BandName</h3>
-        <p>Description: @Model.Description. <img src="~/Images/Metallica-Black-Album.jpg" /> </p>*@
-
-    @*<h2>Name: @Model.Name</h2>
-        <h3>Band: @Model.BandName</h3>
-        <p>Description: @Model.Description. <img src="~/Images/Metallica-Black-Album.jpg" /> </p>*@
-
+    <footer>
+        &copy;2021 AWESOME FUN DIVAS
+    </footer>
 
 </body>
 </html>

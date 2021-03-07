@@ -1,0 +1,48 @@
+﻿@model ReviewsSite.Models.Review
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/styles/AlbumStyles/DetailStyle.css">
+</head>
+<body>
+    <h4>Create Review</h4>
+        <form action="/Album/Index" method="get">
+            <label for="ReviewerName">Name</label><br>
+            <input type="text" id="ReviewerName" name="ReviewerName"><br>
+            <textarea id="Content" name="Content" rows="4" cols="50"></textarea>
+
+
+            <input type="radio" id="1 star" name="Rating" value="1 star" />
+            <label for="1 star">1 star</label>
+
+            <input type="radio" id="2 star" name="Rating" value="2 star" />
+            <label for="2 star">2 star</label>
+
+            <input type="radio" id="3 star" name="Rating" value="3 star" />
+            <label for="3 star">3 star</label>
+
+            <input type="radio" id="4 star" name="Rating" value="4 star" />
+            <label for="4 star">4 star</label>
+
+            <input type="radio" id="5 star" name="Rating" value="5 star" />
+            <label for="5 star">5 star</label>
+    </form>
+</body>
+</html>
+
+    @*
+
+
+
+        For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+    *@
+    @{
+    }

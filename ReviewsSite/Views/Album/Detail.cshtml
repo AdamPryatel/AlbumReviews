@@ -1,0 +1,81 @@
+﻿@model ReviewsSite.Models.Album
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/styles/AlbumStyles/DetailStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Germania+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="/Album/Index">HOME</a></li>
+                <li><strong>|</strong></li>
+                <li><a href="/Review/Create/">ADD REVIEW</a></li>
+                <li><strong>|</strong></li>
+                <li><a href="">CREATORS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="mainBody">
+
+            <div class="bandAlbum">
+                <h1>@Model.Name by @Model.BandName</h1>
+            </div>
+
+            <div id="Container">
+                <p><img src="~/@Model.Image" width="350" /></p>
+
+                <h5>TRACKLIST</h5>
+                <div class="songList">
+                    @foreach (var song in Model.ListofSongs)
+                    {
+                        <ul>
+                            <li>@song</li>
+                        </ul>
+                    }
+                </div>
+            <p>Description: @Model.Description</p>
+            </div>
+
+
+            <h3>Reviews</h3>
+            <div id="ReviewContainer">
+                @foreach (var review in Model.Review)
+                {
+                    <article class="reviewBox">
+                        <p>Rating: @review.Rating Star</p>
+                        <p>Review: @review.Content</p>
+                        <p>UserName: @review.ReviewerName</p>
+                        <a href="/Review/Update/@review.Id">Update Review</a>
+                        <a href="/Review/Delete/@review.Id">Delete Review</a>
+                    </article>
+                }
+
+            </div>
+
+            <p><a href="/Review/CreateByAlbumId/?albumId=@Model.Id">Add Review</a></p>
+        </section>
+    </main>
+
+    <footer>
+        &copy;2021 AWESOME FUN DIVAS
+    </footer>
+
+</body>
+</html>
+
+@{
+}

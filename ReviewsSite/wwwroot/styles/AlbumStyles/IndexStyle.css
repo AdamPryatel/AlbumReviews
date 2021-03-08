@@ -1,0 +1,224 @@
+﻿* {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.618em;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+}
+
+html {
+    font-size: 16px;
+    background: rgb(34, 34, 34);
+    margin-top: 0em;
+}
+
+body {
+    text-align: center;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+    text-align: center;
+    top: 0;
+    padding: 0 1%;
+    position: fixed;
+    height: 30px;
+    width: 100%;
+    background: rgb(34, 34, 34);
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-top: 0em;
+    align-content: space-between;
+}
+
+.nav_links a {
+    letter-spacing: .25em;
+}
+
+.nav_links li {
+    padding: 0px 5px;
+}
+
+.nav_links li a {
+     text-decoration: none;
+     color: rgb(224, 87, 23);
+     border-radius: 5px;
+     font-size: large;
+     font-weight: lighter;
+     /* box-shadow: 0 0 12px rgb(182, 182, 182); */
+     padding: .075em;
+}
+
+.nav_links li a:hover {
+     color: white;
+     border-radius: 9px;
+     background: rgb(224, 87, 23);
+     font-weight: lighter;
+     box-shadow: 0 0 5px rgb(182, 182, 182);
+     padding: .075em;
+}
+
+#topPage {
+    width: 100%;
+    height: 600px;
+    background: url("/Images/RecordStore.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 1rem auto 4rem auto;
+    /* border-radius: 27px; */
+    text-align: center;
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;    
+
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    padding: 0em 0;
+}
+
+
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 89px;
+    text-shadow: 3px -3px 3px rgb(224, 87, 23);
+    font-family: 'Germania One', cursive;
+}
+
+#middlePage {
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: auto auto;
+    max-width: 1050px;
+    width: auto;
+    text-align: center;
+    letter-spacing: .015em;
+    border-bottom: 3px solid rgb(224, 87, 23);
+}
+
+h2 {
+    color: rgb(224, 87, 23);
+    font-size: 49px;
+    font-family: 'Germania One', cursive;
+    text-shadow: 2px -2px 1px rgb(255, 255, 255);
+}
+
+#allAlbums h2 {
+    padding-bottom: 0em;
+    border-top: 3px solid rgb(224, 87, 23);
+}
+
+#album {
+/*    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
+    justify-content: space-around;
+    column-gap: .75em;*/
+    
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+
+
+    font-size: 12.7px;
+/*    align-items: space-around;*/
+}
+
+.box {
+/*    background:rgb(34, 34, 34);
+    box-shadow: 0 0 8px rgb(182, 182, 182);*/
+    padding: 1.25em;
+    border-radius: 5.5px;
+    margin-bottom: 1em;
+}
+
+.box img {
+/*    max-height: 300px;
+    max-width: 300px;*/
+    height: 300px;
+    width: 300px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgb(77, 77, 77);
+}
+
+.box img:hover {
+    height: 305px;
+    width: 305px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px rgb(87, 87, 87);
+    
+}
+
+a{
+    text-decoration: none;
+    padding-bottom: 1.5em;
+    letter-spacing: .05em;
+    color: rgb(255, 255, 255);
+    font-weight: lighter;
+
+}
+
+a:hover {
+    color: rgb(224, 87, 23);
+    font-weight: bolder;
+}
+
+footer {
+    margin-top: 2em;
+    margin-bottom: 0;
+    color: rgb(255, 255, 255);
+    padding: 2em 0 1em 0;
+    text-align: center;
+    font-size: .8em;
+    width: 100%;
+    margin: 0 auto;
+    font-weight: lighter;
+    letter-spacing: .01em;
+}
+
+
+/* ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    margin:0;
+    padding:0;
+
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+    a:hover {
+        color: #32CD32;
+        background-color: #000;
+    }*/

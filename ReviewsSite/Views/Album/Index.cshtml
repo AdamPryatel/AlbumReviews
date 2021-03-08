@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ReviewsSite.Models.Album>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/styles/AlbumStyles/IndexStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Germania+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="/Album/Index">HOME</a></li>
+                <li><strong>|</strong></li>
+                <li><a href="/Review/Create/">ADD REVIEW</a></li>
+                <li><strong>|</strong></li>
+                <li><a href="">CREATORS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="topPage">
+            <h1>WCCI ALBUM REVIEWS</h1>
+        </section>
+
+        <section id="middlePage">
+            <section id="allAlbums">
+                <h2>ALBUMS</h2>
+                <div id="album">
+                    @foreach (var Album in Model)
+                    {
+                        <article class="box">
+                            <h3><a href="/Album/Detail/@Album.Id">@Album.Name by @Album.BandName</a></h3>
+                            <a href="/Album/Detail/@Album.Id"><img src="~/@Album.Image" width="350" /></a>
+                        </article>
+                    }
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        &copy;2021 AWESOME FUN DIVAS
+    </footer>
+
+</body>
+</html>
